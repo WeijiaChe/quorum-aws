@@ -13,6 +13,6 @@ echo "building quorum"
 docker build -t quorum ./dependencies/quorum
 
 echo "building constellation"
-docker build -t constellation -f ./dependencies/constellation/build-fedora.dockerfile --build-arg DISTRO_VERSION=26 ./dependencies/constellation
+docker build -t constellation -f ./dependencies/constellation/build-ubuntu.dockerfile --build-arg DISTRO_VERSION=xenial ./dependencies/constellation
 
 echo "done building packages"
