@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-IMAGES_REGION=us-east-1
+IMAGES_REGION=us-west-2
 IMAGES=(quorum constellation quorum-aws)
 
 eval `sudo aws ecr get-login --region="${IMAGES_REGION}" | sed 's/^docker/sudo docker/'` >/dev/null

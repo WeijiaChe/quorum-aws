@@ -50,7 +50,7 @@ Here, `demo` is a symlink to the wrapper script that will invoke Terraform in a 
 
 The pre-supplied binary wrappers have the following purposes:
 - `global` environment contains IAM infrastructure that is not particular to any one AWS region, and will be `apply`ed only once.
-- `demo` is the default name of a single-region cluster that will be deployed to `us-east-1`.
+- `demo` is the default name of a single-region cluster that will be deployed to `us-west-2`.
 - `intl-ireland`, `intl-tokyo`, and `intl-virginia` contain the infrastructure respectively for 3 different regions in an international cluster. This infrastructure lives in separate files because Terraform is hard-coded to support at most one region per `main.tf` file.
 
 If you want, you can simply make a new symlink (in `terraform/bin`) to `terraform/bin/.bin/env-wrapper` named whatever you like (eg. `mycluster`), and then you can use that script to launch a new cluster with that name.
