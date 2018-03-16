@@ -15,5 +15,5 @@ print_usage() {
 
 env=$1
 
-.multi-start-tunnels $env
-.multi-start-cluster $env
+bin/.multi-start-tunnels $env
+bin/.multi-start-cluster $env

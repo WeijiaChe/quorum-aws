@@ -23,7 +23,7 @@ variable "tunnel_keypair_name" {
   default = "tunnel"
 }
 variable "project" {
-  default = "quorum-cluster"
+  default = "nocenter-quorum-cluster"
 }
 variable "instance_types" {
   default = {
