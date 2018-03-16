@@ -67,7 +67,7 @@ variable "aws_region" {
 }
 variable "subnet_azs" {
   type = "list"
-  default = ["us-west-2b", "us-west-2c", "us-west-2d"]
+  default = ["us-west-2a", "us-west-2b", "us-west-2c"]
 }
 variable "total_cluster_size" {
   default = 3 # Number of quorum nodes in this cluster across all aws regions.
