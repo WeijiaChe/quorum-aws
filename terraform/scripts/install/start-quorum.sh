@@ -3,8 +3,8 @@
 set -euo pipefail
 
 gid=$(cat node-id)
-p2p_port=$((30400 + $gid))
-rpc_port=$((40400 + $gid))
+p2p_port=$((21000 + $gid))
+rpc_port=$((22000 + $gid))
 raft_port=$((50400 + $gid))
 
 echo "starting geth ${gid}"

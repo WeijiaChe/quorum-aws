@@ -119,16 +119,16 @@ resource "aws_security_group" "quorum_instance" {
 
   # Geth P2P traffic
   ingress {
-    from_port = 30400
-    to_port = 30900
+    from_port = 21000
+    to_port = 21900
     protocol = "tcp"
     self = true # incoming traffic comes from this same security group
   }
 
   # Geth admin RPC traffic
   ingress {
-    from_port = 40400
-    to_port = 40900
+    from_port = 22000
+    to_port = 22900
     protocol = "tcp"
     security_groups = ["${aws_security_group.rpc_sender.id}"]
   }
@@ -144,7 +144,7 @@ resource "aws_security_group" "quorum_instance" {
   # Constellation traffic
   ingress {
     from_port = 9000
-    to_port = 9500
+    to_port = 9900
     protocol = "tcp"
     self = true # incoming traffic comes from this same security group
   }
