@@ -40,4 +40,4 @@ executable aws-bootstrap
 
 source-repository head
   type:     git
-  location: https://github.com/jpmorganchase/quorum-aws.git
+  location: https://github.com/WeijiaChe/quorum-aws.git
