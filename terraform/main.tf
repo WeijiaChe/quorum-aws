@@ -122,7 +122,7 @@ resource "aws_security_group" "quorum_instance" {
     from_port = 21000
     to_port = 21900
     protocol = "tcp"
-    self = true # incoming traffic comes from this same security group
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   # Geth admin RPC traffic
@@ -130,7 +130,7 @@ resource "aws_security_group" "quorum_instance" {
     from_port = 22000
     to_port = 22900
     protocol = "tcp"
-    security_groups = ["${aws_security_group.rpc_sender.id}"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   # Raft HTTP traffic
@@ -138,7 +138,7 @@ resource "aws_security_group" "quorum_instance" {
     from_port = 50400
     to_port = 50900
     protocol = "tcp"
-    self = true # incoming traffic comes from this same security group
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   # Constellation traffic
@@ -146,7 +146,7 @@ resource "aws_security_group" "quorum_instance" {
     from_port = 9000
     to_port = 9900
     protocol = "tcp"
-    self = true # incoming traffic comes from this same security group
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
