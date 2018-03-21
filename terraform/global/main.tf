@@ -32,5 +32,5 @@ EOF
 
 resource  "aws_iam_instance_profile" "ecr_accessor" {
   name = "${var.project}.${var.env}.ecrAccessor"
-  roles = ["${aws_iam_role.ecr_accessor.name}"]
+  role = "${aws_iam_role.ecr_accessor.name}"
 }
