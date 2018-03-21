@@ -77,7 +77,7 @@ variable "num_instances" {
 }
 variable "first_geth_id" {
   description = "Amount to add to the instance's count.index to calculate gethId. This is primarily for supporting multi-region clusters. Starting from 8 since we already have 7 instances allocated in alibaba cloud."
-  default = 8
+  default = 1
 }
 #
 # [End of variables overridden by multi-region settings.]
