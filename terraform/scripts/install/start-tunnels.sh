@@ -36,7 +36,7 @@ start_tunnels() {
     gid=$1
     eip=$2
 
-    start_tunnel $gid $eip "3040${gid}" # Ethereum P2P
+    start_tunnel $gid $eip "2100${gid}" # Ethereum P2P
     start_tunnel $gid $eip "5040${gid}" # Raft HTTP
     start_tunnel $gid $eip "900${gid}"  # Constellation
 }
