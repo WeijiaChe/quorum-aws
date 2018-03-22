@@ -27,7 +27,7 @@ variable "project" {
 }
 variable "instance_types" {
   default = {
-    quorum = "m3.large"
+    quorum = "m5.large"
     # TODO: other types of nodes, like for metrics or rpc (tx) senders
   }
 }
