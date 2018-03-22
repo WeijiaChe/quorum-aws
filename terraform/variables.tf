@@ -23,11 +23,11 @@ variable "tunnel_keypair_name" {
   default = "tunnel"
 }
 variable "project" {
-  default = "nocenter-quorum-cluster"
+  default = "quorum-cluster"
 }
 variable "instance_types" {
   default = {
-    quorum = "m5.large"
+    quorum = "m4.large"
     # TODO: other types of nodes, like for metrics or rpc (tx) senders
   }
 }
@@ -70,10 +70,10 @@ variable "subnet_azs" {
   default = ["us-west-2a", "us-west-2b", "us-west-2c"]
 }
 variable "total_cluster_size" {
-  default = 3 # Number of quorum nodes in this cluster across all aws regions.
+  default = 10 # Number of quorum nodes in this cluster across all aws regions.
 }
 variable "num_instances" {
-  default = 3 # This is less than total_cluster_size when we are running a multi-region setup.
+  default = 10 # This is less than total_cluster_size when we are running a multi-region setup.
 }
 variable "first_geth_id" {
   description = "Amount to add to the instance's count.index to calculate gethId. This is primarily for supporting multi-region clusters. Starting from 8 since we already have 7 instances allocated in alibaba cloud."
